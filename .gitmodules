@@ -1,0 +1,8 @@
+[submodule "meta-rpi"]
+	path = meta-rpi
+	url = git://git.yoctoproject.org/meta-raspberrypi
+	branch = honister
+[submodule "meta-openembedded"]
+	path = meta-openembedded
+	url = https://git.openembedded.org/meta-openembedded
+	branch = honister
