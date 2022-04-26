@@ -1,3 +1,18 @@
+How to build raspberry pi image
+====
+```
+git submodule init
+git submodule update
+source oe-init-build-env
+bitbake core-image-base
+```
+
+The resulting image may be flashed to SD card by:
+```
+bmaptool copy poky-rpi/build/tmp/deploy/images/raspberrypi3/core-image-base-raspberrypi3-20220426074949.rootfs.wic.bz2 /dev/mmcblk0
+```
+
+
 Poky
 ====
 
@@ -16,7 +31,7 @@ in the form of BSP layers which extend the systems capabilities in a modular way
 Many layers are available and can be found through the
 [layer index](https://layers.openembedded.org/).
 
-As an integration layer Poky consists of several upstream projects such as 
+As an integration layer Poky consists of several upstream projects such as
 [BitBake](https://git.openembedded.org/bitbake/),
 [OpenEmbedded-Core](https://git.openembedded.org/openembedded-core/),
 [Yocto documentation](https://git.yoctoproject.org/cgit.cgi/yocto-docs/),
@@ -24,11 +39,11 @@ the '[meta-yocto](https://git.yoctoproject.org/cgit.cgi/meta-yocto/)' layer
 which has configuration and hardware support components. These components
 are all part of the Yocto Project and OpenEmbedded ecosystems.
 
-The Yocto Project has extensive documentation about the system including a 
+The Yocto Project has extensive documentation about the system including a
 reference manual which can be found at <https://docs.yoctoproject.org/>
 
 OpenEmbedded is the build architecture used by Poky and the Yocto project.
-For information about OpenEmbedded, see the 
+For information about OpenEmbedded, see the
 [OpenEmbedded website](https://www.openembedded.org/).
 
 Contribution Guidelines
